@@ -1,4 +1,4 @@
-all: $(patsubst %.c, %.out, $(wildcard *.c))
+all: $(patsubst src/%.c, %.out, $(wildcard src/*.c))
 
-%.out: %.c
+%.out: src/%.c
 	gcc $< -o obj/$@
